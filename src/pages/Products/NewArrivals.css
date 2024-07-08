@@ -1,0 +1,126 @@
+.new-arrivals {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .new-arrivals h1 {
+    font-size: 2.5em;
+    
+  }
+  
+  .new-arrivals p {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: gray;
+  }
+  
+  .tabs {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tabs button {
+    background-color: #f8f8f8;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .tabs button.active {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 20px;
+  }
+  
+  
+  .product-info h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .product-info p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .product-info .rating {
+    color: gold;
+    font-size: 1.2em;
+  }
+  
+  .product-info h3 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .product-info .status {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .view-more {
+    background-color: #ccc;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .products {
+      grid-template-columns: 1fr;
+    }
+  
+    .product-card {
+      width: 90%;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  }
+ 
+  
+  @media (max-width: 1200px) {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
