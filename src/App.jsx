@@ -15,6 +15,12 @@ import Cart from "./pages/Cart/Cart.jsx";
 import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
+import axios from "axios"
+import VerifyUser from "./pages/VerifyUser.jsx";
+
+axios.defaults.baseURL="http://localhost:8000";
+axios.defaults.withCredentials=true;
+// withCredentials:true to set cookie in cookies
 
 export default function App() {
   return (
@@ -22,7 +28,8 @@ export default function App() {
       <Header />
       <Routes>
         <Route element={<Home />} index />
-        <Route element={<Login />} path="login" />
+        <Route path="/user/verify/:userId/:uniqueString" element={<VerifyUser/>} />
+        <Route element={<Login />} path="/login" />
         <Route element={<SignUp />} path="signup" />
         <Route element={<ProductPage />} path="products" />
         <Route element={<ForgetPass />} path="forget-password" />
