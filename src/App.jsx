@@ -15,12 +15,8 @@ import Cart from "./pages/Cart/Cart.jsx";
 import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
-import axios from "axios"
 import VerifyUser from "./pages/VerifyUser.jsx";
 
-axios.defaults.baseURL="http://localhost:8000";
-axios.defaults.withCredentials=true;
-// withCredentials:true to set cookie in cookies
 
 export default function App() {
   return (

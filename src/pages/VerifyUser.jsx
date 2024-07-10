@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import useAxiosPublic from '../hooks/useAxios';
 
 const VerifyUser = () => {
   const { userId, uniqueString } = useParams();
   const navigate = useNavigate();
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const axios = useAxiosPublic()
 
   // useEffect(() => {
     const verifyUser = async () => {
       // try {
-        await axios.get(`/api/v1/users/verify/${userId}/${uniqueString}`)
+        await axios(`/users/verify/${userId}/${uniqueString}`)
         .then(response=>{
           console.log(response)
         })
