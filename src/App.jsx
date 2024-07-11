@@ -16,7 +16,11 @@ import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
 import VerifyUser from "./pages/VerifyUser.jsx";
+import axios from 'axios'
+import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
 
+axios.defaults.withCredentials=true;
+// withCredentials:true to set cookie in cookies
 
 export default function App() {
   return (
@@ -25,11 +29,12 @@ export default function App() {
       <Routes>
         <Route element={<Home />} index />
         <Route path="/user/verify/:userId/:uniqueString" element={<VerifyUser/>} />
+        <Route path="/user/reset-password/:userId/:token" element={<VerifyForgotPasswordLink/>}/>
         <Route element={<Login />} path="/login" />
         <Route element={<SignUp />} path="signup" />
         <Route element={<ProductPage />} path="products" />
         <Route element={<ForgetPass />} path="forget-password" />
-        <Route element={<NewPassword />} path="forget-password/new-password" />
+        <Route element={<NewPassword />} path="forget-password/new-password/:userId/:token" />
         <Route element={<MensSection />} path="mens-section" />
         <Route element={<WomensSection />} path="womens-section" />
         <Route element={<WomensSection />} path="womens-section" />
