@@ -4,9 +4,11 @@ import img1 from '../../images/deal1.png';
 import img2 from '../../images/deal2.png';
 import img3 from '../../images/text.png';
 
-const DealsOfTheMonth = (webData) => {
+const DealsOfTheMonth = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date('2024-07-08') - +new Date();
+    const now = new Date();
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0); // End of current month
+    const difference = endOfMonth - now;
     let timeLeft = {};
 
     if (difference > 0) {
@@ -40,7 +42,7 @@ const DealsOfTheMonth = (webData) => {
       <div className="text-item">
         <h1>Deals Of The Month</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Scelerisque duis ultrices sollicitudin aliquam sem.</p>
-        <button style={{backgroundColor: webData.mainColor}} >Buy Now</button>
+        <button>Buy Now</button>
         <div className="timer-container">
           <h2>Hurry, Before It’s Too Late!</h2>
           <div className="timer">
@@ -66,7 +68,7 @@ const DealsOfTheMonth = (webData) => {
       <div className="images-container">
         <div className="image-item">
           <img src={img1} alt="Deal 1" />
-          <div className="discount">30% OFF</div>
+         
         </div>
         <div className="image-item">
           <img src={img2} alt="Deal 2" />

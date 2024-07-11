@@ -1,8 +1,8 @@
 import "./ProductBar.css";
 
-function ProductBar({webData}) {
+function ProductBar() {
   return (
-    <div style={{backgroundColor: webData.mainColor}} class="root">
+    <div class="root">
       <div class="root-child"></div>
       <div class="navbar" id="navbarContainer">
         <a class="tshirt">TSHIRT</a>
