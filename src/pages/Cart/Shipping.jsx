@@ -1,17 +1,22 @@
 import React from 'react'
 import './Shipping.css'
 import { Link } from 'react-router-dom'
+import home from '../../images/home.jpg'
+import wallet from '../../images/wallet-1.jpg'
+import list from '../../images/list.jpg'
 
 function Shipping() {
     return (
         <div>
             <p class="paymenthead">Shipping Address</p>
-            <div class="addressdisplay">
-                <img src="img/home.png" alt="Error" class="home" />
-                <span class="line">--------------------------------------</span>
-                <img src="img/wallet.jpg" alt="Error" class="wallet" />
-                <span class="line">--------------------------------------</span>
-                <img src="img/notepad.jpg" alt="Error" class="notepad" />
+            <div className="addressdisplay">
+                <ul className='ad'>
+                    <li><img src={home} alt="Error" className="home-icon" /></li>
+                    <li>--------------------------------------</li>
+                    <li><img src={wallet} alt="Error" className="wallet-icon" /></li>
+                    <li>--------------------------------------</li>
+                    <li><img src={list} alt="Error" className="notepad-icon" /></li>
+                </ul>
 
             </div>
             <div class="cashcard">
@@ -42,7 +47,6 @@ function Shipping() {
                 address" button. Or you can enter a new delivery address</p>
 
             <div class="robertfox"></div>
-            <div class="johnwillions"></div>
             <button class="deliverhere"><span>Deliver Here</span></button>
 
 
@@ -102,7 +106,7 @@ function Shipping() {
 
                     </select>
                 </div>
-                <div class="newdefaultcheckbox"><input type="checkbox" checked /> Use as my default address</div>
+                <div class="newdefaultcheckbox"><input type="checkbox" /> Use as my default address</div>
                 <button class="continue"><Link to='/payment'><span>Continue</span></Link></button>
             </div>
         </div>
