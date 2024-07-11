@@ -4,7 +4,7 @@ import img1 from '../../images/deal1.png';
 import img2 from '../../images/deal2.png';
 import img3 from '../../images/text.png';
 
-const DealsOfTheMonth = () => {
+const DealsOfTheMonth = (webData) => {
   const calculateTimeLeft = () => {
     const difference = +new Date('2024-07-08') - +new Date();
     let timeLeft = {};
@@ -40,7 +40,7 @@ const DealsOfTheMonth = () => {
       <div className="text-item">
         <h1>Deals Of The Month</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Scelerisque duis ultrices sollicitudin aliquam sem.</p>
-        <button>Buy Now</button>
+        <button style={{backgroundColor: webData.mainColor}} >Buy Now</button>
         <div className="timer-container">
           <h2>Hurry, Before It’s Too Late!</h2>
           <div className="timer">
