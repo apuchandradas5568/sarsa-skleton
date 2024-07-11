@@ -1,71 +1,3 @@
-.usd {
-    color: black;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.men {
-    color: black;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-
-}
-
-.women {
-    color: black;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.accessories {
-    color: black;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-
-}
-
-.sarsachictop {
-    color: black;
-    font-weight: 600;
-    font-size: x-large;
-    position: absolute;
-    left: 669px;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.about {
-    color: black;
-    position: absolute;
-    right: 308px;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.contactus {
-    color: black;
-    position: absolute;
-    right: 198px;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-
-}
-
-.end {
-    /* border: 2px solid black; */
-
-    width: 100vw;
-    height: 25vw;
-    background-color: black;
-}
-
 .paymenthead {
     font-size: x-large;
     margin-top: 14px;
@@ -74,35 +6,31 @@
 
 .addressdisplay {
     display: flex;
+    margin-left: 100px;
 }
 
-.home {
-    position: relative;
+.ad {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.home-icon {
     width: 26px;
-    left: 82px;
-    margin-top: 18px;
-}
-
-.line {
-    position: relative;
-    top: 23px;
-    left: 87px;
 
 }
 
-.wallet {
-    position: relative;
+.wallet-icon {
+
     width: 37px;
-    left: 76px;
-    top: 9px;
+
 }
 
-.notepad {
-    top: 87px;
-    left: 559px;
-    position: absolute;
+.notepad-icon {
+
     width: 48px;
-    height: 51px;
+
 }
 
 .paymentform {
@@ -122,28 +50,7 @@
     width: 233px;
     border: 2px solid black;
     border-radius: 10px;
-
-
 }
-
-.johnwillions {
-    border-radius: 10px;
-    left: 361px;
-    top: 196px;
-    position: absolute;
-    height: 87px;
-    width: 233px;
-    border: 2px solid black;
-
-}
-
-/* .debit{
-    margin-top: 16px;
-} */
-/* .debit h4{
-    display: inline;
-} */
-.newadd {}
 
 .mobno {
     margin-top: 14px;
@@ -184,32 +91,6 @@
 
 }
 
-/* .expirydate_cvv{
-    display: flex;
-}
-.ex{
-    margin-top: 14px;
-}
-#date{
-    border-radius: 9px;
-    border: 2px solid black;
-    height: 39px;
-    width: 270px;
-
-}
-.cv{
-    margin-left: 15px;
-    margin-top: 14px;
-    
-    top: -52px;
-    left: 282px;
-}
-#cvv{
-    border-radius: 9px;
-    border: 2px solid black;
-    height: 39px;
-    width: 270px;
-} */
 .deliverhere {
     height: 52px;
     list-style: none;
@@ -217,14 +98,12 @@
     background-color: black;
     padding: 11px;
     margin-top: 27px;
-
+    color: white;
     width: 259px;
     border-radius: 13px;
 }
 
-.deliverhere {
-    color: white;
-}
+
 
 .selectcity {
     width: 86px;
@@ -240,24 +119,6 @@
 
 }
 
-/* .gpay{
-    margin-top: 18px;
-}
-.gpay h4{
-    display:inline;
-}
-.paypal{
-    margin-top: 18px;
-}
-.paypal h4{
-    display:inline;
-}
-.cod{
-    margin-top: 18px;
-}
-.cod h4{
-    display: inline;
-} */
 .continue {
     height: 52px;
     list-style: none;
@@ -266,85 +127,10 @@
     padding: 11px;
     margin-top: 27px;
     margin-bottom: 27px;
-
+    color: whitesmoke;
     width: 259px;
     border-radius: 13px;
 
-}
-
-.continue span {
-    color: white;
-}
-
-.sarsachic {
-    color: white;
-    font-weight: 600;
-    font-size: x-large;
-    position: absolute;
-    left: 669px;
-    padding: 10px;
-    list-style: none;
-    text-decoration: none;
-    margin-top: 58px;
-    left: 128px;
-
-}
-
-.sarsachic p {
-    margin-top: 58px;
-}
-
-.sarsachic a {
-    text-decoration: none;
-    color: white;
-}
-
-.sarsachic div {
-    margin-top: 36px;
-
-}
-
-.sss {
-    display: flex;
-
-}
-
-.shop {
-    font-size: x-large;
-    top: 14px;
-
-    position: relative;
-    margin-top: 58px;
-    left: 771px;
-    color: white;
-}
-
-/* .shop p{
-    margin-top: 31px;
-} */
-.shop1 a {
-    display: inline;
-    margin-top: 31px;
-    text-decoration: none;
-    color: white;
-
-}
-
-.shop1 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 57px;
-    font-size: large;
-}
-
-.support {
-    font-size: x-large;
-    top: 14px;
-
-    position: relative;
-    margin-top: 58px;
-    left: 1143px;
-    color: white;
 }
 
 .searchi {

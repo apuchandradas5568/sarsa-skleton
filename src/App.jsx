@@ -37,7 +37,6 @@ export default function App() {
         <Route element={<NewPassword />} path="forget-password/new-password/:userId/:token" />
         <Route element={<MensSection />} path="mens-section" />
         <Route element={<WomensSection />} path="womens-section" />
-        <Route element={<WomensSection />} path="womens-section" />
         <Route element={<ProductDetails />} path="/product-section" />
         <Route element={<Cart />} path="cart" />
         <Route element={<Payment />} path="payment" />
