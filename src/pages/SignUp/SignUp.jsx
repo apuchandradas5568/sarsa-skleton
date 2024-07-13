@@ -4,8 +4,10 @@ import Google from "../../images/search-1.png";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../Login/Login";
 import "./SignUp.css";
+import OAuth from "../../components/OAuth";
 
 function SignUp() {
+
   return (
     <div className="sign-container">
       <div className="sign-section-1">
@@ -43,16 +45,12 @@ function SignUp() {
 
         <div className="button">
           <button class="sign-in-button">Register</button>
-
-          <button class="Google-button">
-            <img src={Google} alt="" />
-            Sign In With Google
-          </button>
+          <OAuth/>
         </div>
 
         <div class="dont-have-an-account-log-in-wrapper">
           <div class="login-dont-have-an-container">
-            <span class="login-dont-have-an">Alreeady have an account?</span>
+            <span class="login-dont-have-an">Already have an account?</span>
             <span class="span"> </span>
             <Link to="/login" class="sign-up-fo">
               Login here!
