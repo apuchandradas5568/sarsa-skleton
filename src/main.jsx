@@ -9,6 +9,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <WebProvider>
+      <App />
+    </WebProvider>
   </StrictMode>
 );

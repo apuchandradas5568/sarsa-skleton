@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import './MensSection.css'
 import Men from '../../images/menBanner.png'
@@ -16,6 +16,8 @@ function MensSection() {
   const [searchParams] = useSearchParams();
   const axios = useAxiosPublic()
 
+  const [pageData, setPageData] = useState({})
+
   
   const paramValue = searchParams.get('tab');
   console.log(paramValue);
@@ -25,9 +27,10 @@ function MensSection() {
 
   useEffect(()=>{
     const getpageData = async() => {
-      await axios(`/users/get-shop-data/${paramValue}`)
+      await axios(`/users/shop-data/${paramValue}`)
       .then((res)=>{
-        console.log(res);
+        setPageData(res.data.data)
+
       })
     }
 
@@ -49,7 +52,7 @@ function MensSection() {
         </div>
 
         <div className="banner">
-          <img src={Men} alt="" />
+          <img src={pageData.themeImage || Men} alt="" />
         </div>
 
         <div className="category">

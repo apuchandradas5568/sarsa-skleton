@@ -17,12 +17,12 @@ const ShopSections = () => {
   return (
     <div className="shop-sections">
 
-      <Link to={'/mens-section?tab=mens shop'} className="section womens">
+      <Link to={"/mens-section?tab=men's fashion"} className="section womens">
         <span className="label">SHOP WOMENS</span>
         <img src={women} alt="Shop Womens" />
       </Link>
 
-      <Link to={'/womens-section?tab=womens shop'} className="section mens">
+      <Link to={"/womens-section?tab=women's fashion"} className="section mens">
         <span className="label">SHOP MENS</span>
         <img src={men} alt="Shop Mens" />
       </Link>
