@@ -42,8 +42,24 @@ const ProductDetails = () => {
 
   console.log(user);
 
-  const addtoFavorite = (id) => {
+  const addtoFavorite = async (id) => {
       console.log(id);
+
+      const data = {
+        productId : id,
+        accessToken : user.accessToken
+      }
+  
+  
+      
+  
+      await axios.post('/users/add-favorite', {data})
+      .then((res) => {
+        console.log(res);
+      })
+      
+  
+      
   }
 
 
@@ -70,6 +86,9 @@ const ProductDetails = () => {
 
 
   }
+
+
+
 
 
   return (
