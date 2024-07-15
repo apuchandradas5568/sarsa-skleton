@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: transparent;
+  /* Set background to transparent */
+  z-index: 1000;
+  /* Ensure it's on top of other elements */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 100%;
+  /* Optional: Add some padding for better appearance */
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.logo {
+  flex-grow: 1;
+  /* Grow to fill the space */
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  /* Change color of logo text */
+  font-size: 34px;
+  /* Optional: Adjust font size */
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.menu-icon {
+  /* Push the menu icon to the leftmost */
+  font-size: 44px;
+  /* Optional: Adjust icon size */
+}
+
+.search-icon {
+  padding-left: 50px;
+  font-size: 30px;
+  /* Optional: Adjust icon size */
+}
+
+.heart-icon {
+  margin-right: 50px;
+  font-size: 30px;
+  /* Optional: Adjust icon size */
+}
+
+.cart-icon {
+  /* Push the cart icon to the rightmost */
+  font-size: 30px;
+  /* Optional: Adjust icon size */
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    gap: 3rem;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .header-section {
+    position: relative;
+    left: 5%;
+  }
+
+  .header-right {
+    margin-right: 30px;
+  }
+
+  .heart-icon {
+    margin-right: 25px;
+  }
+}
