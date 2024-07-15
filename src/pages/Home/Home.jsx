@@ -14,7 +14,6 @@ function Home() {
 
     const {webData} = useContext(WebContext)
 
-
     return (
         <div className='home-container'>
             <Hero webData={webData} />

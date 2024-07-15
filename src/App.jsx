@@ -16,7 +16,12 @@ import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
 import VerifyUser from "./pages/VerifyUser.jsx";
+
 import Wishlist from "./pages/Products/Wishlist.jsx";
+
+import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
+
+
 
 
 export default function App() {
@@ -26,11 +31,12 @@ export default function App() {
       <Routes>
         <Route element={<Home />} index />
         <Route path="/user/verify/:userId/:uniqueString" element={<VerifyUser/>} />
+        <Route path="/user/reset-password/:userId/:token" element={<VerifyForgotPasswordLink/>}/>
         <Route element={<Login />} path="/login" />
         <Route element={<SignUp />} path="signup" />
         <Route element={<ProductPage />} path="products" />
         <Route element={<ForgetPass />} path="forget-password" />
-        <Route element={<NewPassword />} path="forget-password/new-password" />
+        <Route element={<NewPassword />} path="forget-password/new-password/:userId/:token" />
         <Route element={<MensSection />} path="mens-section" />
         <Route element={<WomensSection />} path="womens-section" />
         <Route element={<ProductDetails />} path="/product-section" />

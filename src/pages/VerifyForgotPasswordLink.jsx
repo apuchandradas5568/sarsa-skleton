@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useAxiosPublic from '../hooks/useAxios';
 
-const VerifyUser = () => {
-  const { userId, uniqueString } = useParams();
+const VerifyForgotPasswordLink = () => {
+  const { userId, token } = useParams();
   const navigate = useNavigate();
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -12,22 +12,23 @@ const VerifyUser = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const response = await axios.get(`/users/verify/${userId}/${uniqueString}`);
+        const response = await axios.get(`/users/reset-password/${userId}/${token}`);
+        // console.log(response);
         if (response.data && response.data.success) {
-          setMessage('Verification successful! Redirecting to login...');
+          setMessage('Password Link Verification successful! Redirecting to Change Password Page...');
             setTimeout(() => {
-              navigate('/login');
+              navigate(`/forget-password/new-password/${userId}/${token}`);
             }, 5000);
         }else{
-          setMessage('Verification failed. Please try again.');
+          setMessage('Password Link Verification failed. Please try again.');
         }
       }
       catch(error){
-        setMessage('An error occurred during verification. Please try again later.');
+        setMessage('An error occurred during password link verification. Please try again later.');
       }
       finally{
         setIsLoading(false);
-        console.log('Verification process finished.');
+        console.log('Password Link Verification process finished.');
       }
     };
     verifyUser();
@@ -36,7 +37,7 @@ const VerifyUser = () => {
   return (
       <div className="verification-container">
         {isLoading ? (
-          <p>Verifying your account...</p>
+          <p>Verifying Password Link...</p>
         ) : (
           <p className='text-black'>{message}</p>
         )}
@@ -44,4 +45,4 @@ const VerifyUser = () => {
   );
 };
 
-export default VerifyUser;
+export default VerifyForgotPasswordLink;
