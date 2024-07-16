@@ -3,7 +3,7 @@ import './Wishlist.css';
 import img1 from '../../images/leftarrow.jpg'
 import img2 from '../../images/ts1.png'
 import img3 from '../../images/remove.jpg'
-import img4 from '../../images/cart.jpg'
+import img4 from '../../images/cart.png'
 import img5 from '../../images/ts2.png'
 import img6 from '../../images/ts3.jpg'
 import img7 from '../../images/ts4.jpg'
