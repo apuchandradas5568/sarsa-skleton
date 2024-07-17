@@ -8,9 +8,7 @@ const WebProvider = ({children}) => {
 
     const [webData, setWebData] = useState([]);
 
-
     const axios = useAxiosPublic();
-
   
     useEffect(() => {
       axios("/users/get-web-data").then((res) => {

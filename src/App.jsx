@@ -19,7 +19,7 @@ import VerifyUser from "./pages/VerifyUser.jsx";
 import axios from 'axios'
 import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
 
-axios.defaults.withCredentials=true;
+// axios.defaults.withCredentials=true;
 // withCredentials:true to set cookie in cookies
 
 export default function App() {
