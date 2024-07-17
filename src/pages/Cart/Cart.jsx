@@ -49,7 +49,6 @@ function Cart() {
         <span class="grandt1">$205.00</span>
       </div>
       <div class="summbox">
-        {cart?.map((product) => console.log(product.product.images[0]))}
 
         {cart &&
           cart.map((productItem, index) => (
@@ -64,6 +63,7 @@ function Cart() {
                   <span className="quant">-</span>
                   <span className="quant">{productItem.quantity}</span>
                   <span className="quant">+</span>
+
                 </div>
                 <p>{productItem.product.name}</p>
                 <p id="t1price">{productItem.product.price}</p>
