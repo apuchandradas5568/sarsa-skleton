@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
-import useAxiosPublic from '../hooks/useAxios';
+import React, { createContext, useEffect, useState } from "react";
+import useAxiosPublic from "../hooks/useAxios";
 export const WebContext = createContext(null);
 
 
@@ -8,7 +8,9 @@ const WebProvider = ({children}) => {
 
     const [webData, setWebData] = useState([]);
 
+
     const axios = useAxiosPublic();
+
   
     useEffect(() => {
       axios("/users/get-web-data").then((res) => {
@@ -17,10 +19,12 @@ const WebProvider = ({children}) => {
     }, []);
 
   return (
-    <WebContext.Provider value={{webData}}>
+    <WebContext.Provider
+      value={{ webData, user, setUser, loading, setLoading }}
+    >
       {children}
     </WebContext.Provider>
-  )
-}
+  );
+};
 
-export default WebProvider
+export default WebProvider;

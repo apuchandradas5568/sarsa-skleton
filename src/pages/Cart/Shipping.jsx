@@ -41,6 +41,7 @@ function Shipping() {
                 <span class="grandt1">$205.00</span>
 
             </div>
+            
             <form action="" class="paymentform" />
             <h3>Select delivery address</h3>
             <p id="delopt">In this address you'd like to display below? If so click the corresponding "Deliver to this

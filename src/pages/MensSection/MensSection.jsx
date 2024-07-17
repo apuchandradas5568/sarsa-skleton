@@ -1,5 +1,5 @@
-import React from 'react'
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import './MensSection.css'
 import Men from '../../images/menBanner.png'
 import Products from "../Products/Products";
@@ -7,9 +7,36 @@ import image1 from "../../images/q.jpeg";
 import image2 from "../../images/3.png";
 import hoverimg from "../../images/2.png";
 import demonimg from "../../images/demon.png";
+import useAxiosPublic from '../../hooks/useAxios';
 
 
 function MensSection() {
+
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const axios = useAxiosPublic()
+
+  const [pageData, setPageData] = useState({})
+
+  
+  const paramValue = searchParams.get('tab');
+  console.log(paramValue);
+
+
+
+
+  useEffect(()=>{
+    const getpageData = async() => {
+      await axios(`/users/shop-data/${paramValue}`)
+      .then((res)=>{
+        setPageData(res.data.data)
+
+      })
+    }
+
+    getpageData()
+  },[])
+
 
   return (
     <div className="mens-frame">
@@ -25,7 +52,7 @@ function MensSection() {
         </div>
 
         <div className="banner">
-          <img src={Men} alt="" />
+          <img src={pageData.themeImage || Men} alt="" />
         </div>
 
         <div className="category">

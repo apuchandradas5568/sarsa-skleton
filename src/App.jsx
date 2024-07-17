@@ -16,10 +16,12 @@ import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
 import VerifyUser from "./pages/VerifyUser.jsx";
-import axios from 'axios'
+
+import Wishlist from "./pages/Products/Wishlist.jsx";
+
 import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
 
-// axios.defaults.withCredentials=true;
+axios.defaults.withCredentials=true;
 // withCredentials:true to set cookie in cookies
 
 export default function App() {
@@ -42,6 +44,7 @@ export default function App() {
         <Route element={<Payment />} path="payment" />
         <Route element={<Shipping />} path="shipping" />
         <Route element={<Summary />} path="summary" />
+        <Route element={<Wishlist />} path="wishlist" />
       </Routes>
       <Footer />
     </BrowserRouter>
