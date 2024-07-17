@@ -7,6 +7,11 @@ import hoverimg from "../../images/2.png";
 import demonimg from "../../images/demon.png";
 
 function ProductPage() {
+
+
+
+  
+
   return (
     <div className="page-wrapper">
       <div className="page-title">

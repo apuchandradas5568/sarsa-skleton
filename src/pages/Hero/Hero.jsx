@@ -8,10 +8,11 @@ import useAxiosPublic from "../../hooks/useAxios";
 
 const Hero = ({webData}) => {
 
+  console.log(webData);
 
   return (
     <div className="App">
-      <div style={{backgroundColor: webData.secondaryColor}} className="leftPartition">
+      <div style={{backgroundColor: webData?.secondaryColor}} className="leftPartition">
         <div className="left-text">
           <p className="description">
             Transform your look with the latest in stree <br />
