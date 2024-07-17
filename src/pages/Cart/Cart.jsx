@@ -16,7 +16,11 @@ function Cart() {
   console.log(cart && cart);
 
   useEffect(() => {
-    axios("/users/get-cart",{withCredentials:true}).then((res) => {
+    axios("/users/get-cart", {
+      headers: {
+        Authorization: "Bearer " + user.accessToken,
+      },
+    }).then((res) => {
       //   console.log(res);
       setCart(res.data.data);
     });
@@ -45,7 +49,6 @@ function Cart() {
         <span class="grandt1">$205.00</span>
       </div>
       <div class="summbox">
-
         {cart &&
           cart.map((productItem, index) => (
             <div className="tshirt1" key={index}>
@@ -59,7 +62,6 @@ function Cart() {
                   <span className="quant">-</span>
                   <span className="quant">{productItem.quantity}</span>
                   <span className="quant">+</span>
-
                 </div>
                 <p>{productItem.product.name}</p>
                 <p id="t1price">{productItem.product.price}</p>
