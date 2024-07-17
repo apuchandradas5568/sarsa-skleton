@@ -16,11 +16,7 @@ function Cart() {
   console.log(cart && cart);
 
   useEffect(() => {
-    axios("/users/get-cart", {
-      headers: {
-        Authorization: "Bearer " + user.accessToken,
-      },
-    }).then((res) => {
+    axios("/users/get-cart",{withCredentials:true}).then((res) => {
       //   console.log(res);
       setCart(res.data.data);
     });

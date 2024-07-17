@@ -21,9 +21,6 @@ import Wishlist from "./pages/Products/Wishlist.jsx";
 
 import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
 
-axios.defaults.withCredentials=true;
-// withCredentials:true to set cookie in cookies
-
 export default function App() {
   return (
     <BrowserRouter>

@@ -36,7 +36,6 @@ const ProductDetails = () => {
   }, [location.search]);
 
 
-
   const {user} = useContext(WebContext)
 
 
@@ -47,50 +46,28 @@ const ProductDetails = () => {
 
       const data = {
         productId : id,
-        accessToken : user.accessToken
       }
-  
-  
-      
-  
-      await axios.post('/users/add-favorite', {data})
+      await axios.post('/users/add-favorite', {data},{withCredentials:true})
       .then((res) => {
         console.log(res);
       })
-      
-  
-      
   }
-
-
   const addtoCart = async (id) => {
     console.log(id);
-
-    
 
     const data = {
       productId : id,
       quantity: 1, 
-      accessToken : user.accessToken
     }
 
-
     console.log(data);
-    
-
-    await axios.post('/users/add-cart', {data})
+  
+    await axios.post('/users/add-cart', {data},{withCredentials:true})
     .then((res) => {
       console.log(res);
     })
-    
-
-
+  
   }
-
-
-
-
-
   return (
     <div className="product-details">
       {pageData && (
