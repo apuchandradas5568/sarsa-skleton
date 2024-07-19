@@ -39,11 +39,7 @@ const ProductDetails = () => {
   const {user} = useContext(WebContext)
 
 
-  console.log(user);
-
   const addtoFavorite = async (id) => {
-      console.log(id);
-
       const data = {
         productId : id,
       }
@@ -53,15 +49,10 @@ const ProductDetails = () => {
       })
   }
   const addtoCart = async (id) => {
-    console.log(id);
-
     const data = {
       productId : id,
       quantity: 1, 
     }
-
-    console.log(data);
-  
     await axios.post('/users/add-cart', {data},{withCredentials:true})
     .then((res) => {
       console.log(res);
