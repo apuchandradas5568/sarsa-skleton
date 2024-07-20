@@ -4,7 +4,7 @@ export const WebContext = createContext(null);
 
 const WebProvider = ({ children }) => {
   const [webData, setWebData] = useState([]);
-
+  
   const [user, setUser] = useState(() => {
     try {
       const storedUser = localStorage.getItem('sarsaUser');
@@ -14,8 +14,6 @@ const WebProvider = ({ children }) => {
       return null;
     }
   });
-
-
 
   const [loading, setLoading] = useState(false);
 

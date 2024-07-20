@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "./App";
 import WebProvider from "./providers/WebProvider";
+import OrderProvider from "./providers/orderProvider";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -10,10 +11,10 @@ const root = createRoot(rootElement);
 root.render(
 
   // <StrictMode>
-  <WebProvider>
-
-    <App />
-  </WebProvider>
   // </StrictMode>
-
+  <WebProvider>
+  <OrderProvider>
+     <App/>
+  </OrderProvider>
+  </WebProvider>
 );
