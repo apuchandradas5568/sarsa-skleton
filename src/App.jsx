@@ -17,6 +17,12 @@ import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
 import VerifyUser from "./pages/VerifyUser.jsx";
 import Wishlist from "./pages/Products/Wishlist.jsx";
+import Profile from "./pages/UserDashboard/Profile.jsx";
+import Delivery from "./pages/UserDashboard/Delivery.jsx";
+import MyOrders from "./pages/UserDashboard/MyOrders.jsx";
+import MyWishlist from "./pages/UserDashboard/MyWishlist.jsx";
+import UpdatePassword from "./pages/UserDashboard/UpdatePassword.jsx";
+
 
 
 export default function App() {
@@ -39,8 +45,13 @@ export default function App() {
         <Route element={<Shipping />} path="shipping" />
         <Route element={<Summary />} path="summary" />
         <Route element={<Wishlist />} path="wishlist" />
+        <Route element={<Profile />} path="userProfile" />
+       <Route element={<Delivery />} path="adddeliveryaddress" />
+       <Route element={<MyOrders />} path="myOrders" />
+       <Route element={<MyWishlist />} path="mywishlist" />
+       <Route element={<UpdatePassword />} path="updatepassword" />
       </Routes>
-      <Footer />
+   <Footer/>
     </BrowserRouter>
   );
 }
