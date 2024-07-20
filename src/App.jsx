@@ -16,12 +16,20 @@ import Payment from "./pages/Cart/Payment.jsx";
 import Shipping from "./pages/Cart/Shipping.jsx";
 import Summary from "./pages/Cart/Summary.jsx";
 import VerifyUser from "./pages/VerifyUser.jsx";
+<<<<<<< HEAD
 import Wishlist from "./pages/Products/Wishlist.jsx";
 import Profile from "./pages/UserDashboard/Profile.jsx";
 import Delivery from "./pages/UserDashboard/Delivery.jsx";
 import MyOrders from "./pages/UserDashboard/MyOrders.jsx";
 import MyWishlist from "./pages/UserDashboard/MyWishlist.jsx";
 import UpdatePassword from "./pages/UserDashboard/UpdatePassword.jsx";
+=======
+
+import Wishlist from "./pages/Products/Wishlist.jsx";
+
+import VerifyForgotPasswordLink from "./pages/VerifyForgotPasswordLink.jsx";
+
+>>>>>>> origin/main
 
 
 
@@ -32,11 +40,19 @@ export default function App() {
       <Routes>
         <Route element={<Home />} index />
         <Route path="/user/verify/:userId/:uniqueString" element={<VerifyUser/>} />
+<<<<<<< HEAD
+=======
+        <Route path="/user/reset-password/:userId/:token" element={<VerifyForgotPasswordLink/>}/>
+>>>>>>> origin/main
         <Route element={<Login />} path="/login" />
         <Route element={<SignUp />} path="signup" />
         <Route element={<ProductPage />} path="products" />
         <Route element={<ForgetPass />} path="forget-password" />
+<<<<<<< HEAD
         <Route element={<NewPassword />} path="forget-password/new-password" />
+=======
+        <Route element={<NewPassword />} path="forget-password/new-password/:userId/:token" />
+>>>>>>> origin/main
         <Route element={<MensSection />} path="mens-section" />
         <Route element={<WomensSection />} path="womens-section" />
         <Route element={<ProductDetails />} path="/product-section" />
@@ -45,6 +61,7 @@ export default function App() {
         <Route element={<Shipping />} path="shipping" />
         <Route element={<Summary />} path="summary" />
         <Route element={<Wishlist />} path="wishlist" />
+<<<<<<< HEAD
         <Route element={<Profile />} path="userProfile" />
        <Route element={<Delivery />} path="adddeliveryaddress" />
        <Route element={<MyOrders />} path="myOrders" />
@@ -52,6 +69,10 @@ export default function App() {
        <Route element={<UpdatePassword />} path="updatepassword" />
       </Routes>
    <Footer/>
+=======
+      </Routes>
+      <Footer />
+>>>>>>> origin/main
     </BrowserRouter>
   );
 }

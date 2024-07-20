@@ -8,6 +8,15 @@
     font-size: 2.5em;
     
   }
+<<<<<<< HEAD
+=======
+
+  a{
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+  
+>>>>>>> origin/main
   
   .new-arrivals p {
     margin-top: 40px;

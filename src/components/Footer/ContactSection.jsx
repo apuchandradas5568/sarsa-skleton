@@ -1,17 +1,55 @@
+<<<<<<< HEAD
 import React from 'react';
 import './ContactSection.css';
 import { FaInstagram, FaFacebook} from "react-icons/fa";
 import {FaXTwitter}  from "react-icons/fa6";
 
 const ContactSection = () => {
+=======
+import React, { useState } from 'react';
+import './ContactSection.css';
+import { FaInstagram, FaFacebook} from "react-icons/fa";
+import {FaXTwitter}  from "react-icons/fa6";
+import useAxiosPublic from "../../hooks/useAxios";
+
+const ContactSection = () => {
+  const [email,setEmail] = useState('');
+  const axios = useAxiosPublic();
+  const handleSubmit = async (ev) =>{
+    ev.preventDefault();
+    try {
+      const response = await axios.post('/promotion/join-us',{
+        email
+      })
+      if(response.data.success){
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+>>>>>>> origin/main
   return (
     <div className="contact-section">
        <span className="contact-text">BE IN TOUCH WITH US</span>
       <div className="contact-content">
+<<<<<<< HEAD
         <div className="contact-form">
           <input type="email" placeholder="ENTER YOUR EMAIL" className="email-input" />
           <button className="join-button">JOIN US</button>
         </div>
+=======
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input 
+            type="email" 
+            placeholder="ENTER YOUR EMAIL" 
+            className="email-input"
+            value={email}
+            onChange={ev=>setEmail(ev.target.value)}
+          />
+          <button className="join-button">JOIN US</button>
+        </form>
+>>>>>>> origin/main
       </div>
       <div className="social-icons">
         <FaInstagram className="social-icon" />

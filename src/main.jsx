@@ -8,9 +8,20 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
+<<<<<<< HEAD
   <StrictMode>
     <WebProvider>
       <App />
     </WebProvider>
   </StrictMode>
+=======
+
+  // <StrictMode>
+  <WebProvider>
+
+    <App />
+  </WebProvider>
+  // </StrictMode>
+
+>>>>>>> origin/main
 );
