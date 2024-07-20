@@ -52,10 +52,12 @@ const ProductDetails = () => {
     const data = {
       productId : id,
       quantity: 1, 
+      size
     }
+    // console.log({data});
     await axios.post('/users/add-cart', {data},{withCredentials:true})
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
     })
   
   }

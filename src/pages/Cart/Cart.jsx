@@ -28,6 +28,7 @@ function Cart() {
       try {
         const response = await axios.get("/users/get-cart");
         const cartData = response.data.data;
+        console.log(cartData);
         setCart(cartData);
       } catch (error) {
         console.error("Error fetching cart data:", error);
@@ -36,7 +37,6 @@ function Cart() {
 
     fetchCart();
   },[]);
-
   return (
     <div>
       <p class="paymenthead">Checkout</p>
@@ -45,6 +45,7 @@ function Cart() {
         {cart &&
           cart.map((productItem, index) => (
             <div className="tshirt1" key={index}>
+              <div>productItem</div>
               <img
                 src={productItem.product.images[0]}
                 className="image-t1"
