@@ -83,15 +83,16 @@
   }
   
   .wish {
-    right: 6px;
+    left: 12px;
     top: 12px;
     position: absolute;
     width: 31px;
   }
   
   .ts1 {
-    margin-left: 49px;
-    width: 220px;
+    border-radius: 33px 33px 0 0;
+    width: 324px;
+    height: 260px;
   }
   
   .ts2 {

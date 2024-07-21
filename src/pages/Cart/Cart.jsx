@@ -100,50 +100,46 @@ import t2 from "../../images/t2.jpg";
 import t3 from "../../images/t3.jpg";
 import useAxiosPublic from "../../hooks/useAxios";
 import { WebContext } from "../../providers/WebProvider";
+import coupongenerator from "../../../../skleton-backend/src/utils/coupon.js";
+import CashCard from "../CashCard.jsx";
+import { OrderContext } from "../../providers/orderProvider.jsx";
 
 function Cart() {
-  const [cart, setCart] = useState(null);
   const axios = useAxiosPublic();
+  const [cart,setCart] = useState('');
 
-  const { user } = useContext(WebContext);
+  // const { user } = useContext(WebContext);
 
-  console.log(cart && cart);
+  const generateCoupon = () => {
+    const newCoupon = coupongenerator();
+    setCoupon(newCoupon);
+  };
+  const {total,deliveryCharge,discount} = useContext(OrderContext);
+  console.log({total,deliveryCharge,discount});
 
   useEffect(() => {
-    axios("/users/get-cart",{}, {
-      withCredentials: true,
-    }).then((res) => {
-      //   console.log(res);
-      setCart(res.data.data);
-    });
-  }, []);
+    const fetchCart = async () => {
+      try {
+        const response = await axios.get("/users/get-cart");
+        const cartData = response.data.data;
+        console.log(cartData);
+        setCart(cartData);
+      } catch (error) {
+        console.error("Error fetching cart data:", error);
+      }
+    };
 
+    fetchCart();
+  },[]);
   return (
     <div>
       <p class="paymenthead">Checkout</p>
-
-      <div class="cashcard">
-        <span class="subtotal">Subtotal</span>
-        <span class="subtotal1">$200.00</span>
-        <hr class="hl1" />
-        <div class="discount-cart">
-          <label for="coupon">Enter Discount Code</label>
-
-          <div class="discountbox">
-            <input type="text" name="myname" id="coupon" />
-          </div>
-          <button className="apply">Apply</button>
-        </div>
-        <span class="del">Delivery Charge</span>
-        <span class="del1">$5.00</span>
-        <hr class="hl2" />
-        <span class="grandt">Grand Total</span>
-        <span class="grandt1">$205.00</span>
-      </div>
+      <CashCard props={{total,deliveryCharge,discount}}/>
       <div class="summbox">
         {cart &&
           cart.map((productItem, index) => (
             <div className="tshirt1" key={index}>
+              <div>productItem</div>
               <img
                 src={productItem.product.images[0]}
                 className="image-t1"

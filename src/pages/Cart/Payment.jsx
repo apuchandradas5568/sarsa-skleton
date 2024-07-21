@@ -1,8 +1,12 @@
 import React from 'react'
 import './Payment.css'
 import { Link } from 'react-router-dom'
+import CashCard from '../CashCard'
+import { useContext } from 'react'
+import { OrderContext } from '../../providers/orderProvider'
 
 function Payment() {
+    const {total,deliveryCharge,discount} = useContext(OrderContext);
     return (
         <div>
             <p class="paymenthead">Payment Method</p>
@@ -14,28 +18,7 @@ function Payment() {
                 <img src="img/notepad.jpg" alt="Error" class="notepad" />
 
             </div>
-            <div class="cashcard">
-                <span class="subtotal">Subtotal</span>
-                <span class="subtotal1">$200.00</span>
-                <hr class="hl1" />
-                <div class="discount">
-                    <label for="coupon">Enter Discount Code</label>
-
-
-
-                    <div class="discountbox">
-                        <input type="text" name="myname" id="coupon" />
-
-                    </div>
-                    <button >Apply</button>
-                </div>
-                <span class="del">Delivery Charge</span>
-                <span class="del1">$5.00</span>
-                <hr class="hl2" />
-                <span class="grandt">Grand Total</span>
-                <span class="grandt1">$205.00</span>
-
-            </div>
+            <CashCard props={{total,deliveryCharge,discount}}/>
             <form action="" class="paymentform" />
             <h3>Select a payment method</h3>
             <div class="debit">

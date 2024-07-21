@@ -119,61 +119,31 @@ const ProductDetails = () => {
   }, [location.search]);
 
 
-
   const {user} = useContext(WebContext)
 
 
-  console.log(user);
-
   const addtoFavorite = async (id) => {
-      console.log(id);
-
       const data = {
         productId : id,
-        accessToken : user.accessToken
       }
-  
-  
-      
-  
-      await axios.post('/users/add-favorite', {data})
+      await axios.post('/users/add-favorite', {data},{withCredentials:true})
       .then((res) => {
         console.log(res);
       })
-      
-  
-      
   }
-
-
   const addtoCart = async (id) => {
-    console.log(id);
-
-    
-
     const data = {
       productId : id,
       quantity: 1, 
-      accessToken : user.accessToken
+      size
     }
-
-
-    console.log(data);
-    
-
-    await axios.post('/users/add-cart', {data})
+    // console.log({data});
+    await axios.post('/users/add-cart', {data},{withCredentials:true})
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
     })
-    
-
-
+  
   }
-
-
-
-
-
   return (
     <div className="product-details">
       {pageData && (

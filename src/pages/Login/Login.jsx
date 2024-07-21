@@ -24,7 +24,7 @@ function Login() {
       const response = await axios.post('/users/login',{
         email,
         password
-      })
+      },{withCredentials:true})
       console.log(response.data);
     } catch (error) {
       console.log(error);

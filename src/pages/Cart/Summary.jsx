@@ -1,7 +1,11 @@
 import React from 'react'
 import './Summary.css'
+import CashCard from '../CashCard'
+import { useContext } from 'react'
+import { OrderContext } from '../../providers/orderProvider'
 
 function Summary() {
+    const {total,deliveryCharge,discount} = useContext(OrderContext);
     return (
         <div>
             <p class="paymenthead">Review Your Order</p>
@@ -13,28 +17,7 @@ function Summary() {
                 <img src="img/notepad.jpg" alt="Error" class="notepad" />
 
             </div>
-            <div class="cashcard">
-                <span class="subtotal">Subtotal</span>
-                <span class="subtotal1">$200.00</span>
-                <hr class="hl1" />
-                <div class="discount">
-                    <label for="coupon">Enter Discount Code</label>
-
-
-
-                    <div class="discountbox">
-                        <input type="text" name="myname" id="coupon" />
-
-                    </div>
-                    <button >Apply</button>
-                </div>
-                <span class="del">Delivery Charge</span>
-                <span class="del1">$5.00</span>
-                <hr class="hl2" />
-                <span class="grandt">Grand Total</span>
-                <span class="grandt1">$205.00</span>
-
-            </div>
+            <CashCard props={{total,deliveryCharge,discount}}/>
             <div class="summbox">
                 <span>Estimated Delivery: 17 July 2024</span>
                 <div class="tshirt1">
