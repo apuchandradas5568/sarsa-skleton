@@ -12,8 +12,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/main
 .app {
   display: flex;
   flex-direction: column;

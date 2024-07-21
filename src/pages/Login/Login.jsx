@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+import React from "react";
+=======
 import React, { useState } from "react";
+>>>>>>> origin/main
 import image from "../../images/n-1.jpeg";
 import Google from "../../images/search-1.png";
 import { Link, NavLink } from "react-router-dom";
 import SignUp from "../SignUp/SignUp";
 import "./Login.css";
+<<<<<<< HEAD
+
+function Login() {
+=======
 import useAxiosPublic from "../../hooks/useAxios";
 import OAuth from "../../components/OAuth";
 
@@ -22,6 +30,7 @@ function Login() {
       console.log(error);
     }
   }
+>>>>>>> origin/main
   return (
     <div className="container">
       <div className="section-1">
@@ -37,17 +46,24 @@ function Login() {
               type="email"
               placeholder=" Enter your email"
               id="input-box"
+<<<<<<< HEAD
+=======
               value={email}
               onChange={ev=>setEmail(ev.target.value)}
+>>>>>>> origin/main
             />
           </div>
 
           <div className="input-pass">
             <label htmlFor="input-box">Password</label>
+<<<<<<< HEAD
+            <input type="password" placeholder=" *******" id="input-box" />
+=======
             <input type="password" placeholder=" *******" id="input-box"
             value={password}
             onChange={ev=>setPassword(ev.target.value)}
             />
+>>>>>>> origin/main
           </div>
         </div>
 
@@ -63,8 +79,17 @@ function Login() {
         </div>
 
         <div className="button">
+<<<<<<< HEAD
+          <button class="sign-in-button">Sign in</button>
+
+          <button class="Google-button">
+            <img src={Google} alt="" />
+            Sign In With Google
+          </button>
+=======
           <button class="sign-in-button" onClick={handleSubmit}>Sign in</button>
           <OAuth/>
+>>>>>>> origin/main
         </div>
 
         <div class="dont-have-an-account-sign-up-wrapper">

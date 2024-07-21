@@ -16,7 +16,10 @@ body {
   --color-gainsboro: #e8e7e2;
   --color-black: #000;
 }
+<<<<<<< HEAD
+=======
 a{
   text-decoration: none !important;
   color: #000 !important;
 }
+>>>>>>> origin/main

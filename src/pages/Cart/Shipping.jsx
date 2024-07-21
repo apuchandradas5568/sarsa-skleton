@@ -94,7 +94,10 @@ function Shipping() {
                 </ul>
 
             </div>
+
+
             <CashCard props={{total,deliveryCharge,discount}}/>
+
             <form action="" class="paymentform" />
             <h3>Select delivery address</h3>
             <p id="delopt">In this address you'd like to display below? If so click the corresponding "Deliver to this

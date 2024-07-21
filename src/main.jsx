@@ -10,11 +10,10 @@ const root = createRoot(rootElement);
 
 root.render(
 
-  // <StrictMode>
-  // </StrictMode>
   <WebProvider>
   <OrderProvider>
      <App/>
   </OrderProvider>
   </WebProvider>
+
 );
