@@ -1,3 +1,4 @@
+
 import React, { createContext, useEffect, useState } from "react";
 import useAxiosPublic from "../hooks/useAxios";
 export const WebContext = createContext(null);
@@ -38,4 +39,6 @@ const WebProvider = ({ children }) => {
   );
 };
 
+
 export default WebProvider;
+
