@@ -155,12 +155,9 @@ function Cart() {
                 <p id="t1price">{productItem.product.price}</p>
                 <p id="t1price2">$20.00</p>
                 <p>
-                  Size:
-                  {productItem.size.map((value, idx) => (
-                    <div key={idx}>
-                      <span>{value} </span>
-                      <br/>
-                    </div>
+                  Size:{" "}
+                  {productItem.product.sizes.map((size, idx) => (
+                    <span key={idx}>{size} </span>
                   ))}
                 </p>
               </div>
