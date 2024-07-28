@@ -1,11 +1,32 @@
 import React from "react";
+import React, { useState } from "react";
 import image from "../../images/n-1.jpeg";
 import Google from "../../images/search-1.png";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../Login/Login";
 import "./SignUp.css";
+import OAuth from "../../components/OAuth";
+import useAxiosPublic from "../../hooks/useAxios";
 
 function SignUp() {
+  const [username,setName]=useState('');
+  const [password,setPassword]=useState('');
+  const [email,setEmail]=useState('');
+  const axios = useAxiosPublic();
+
+  const handleSubmit = async () =>{
+    try{
+      const response = await axios.post('/users/register',{
+        username,
+        email,
+        password
+      })
+      console.log(response.data);
+    }
+    catch(error){
+      console.log(error);
+    }
+  }
   return (
     <div className="sign-container">
       <div className="sign-section-1">
@@ -21,6 +42,8 @@ function SignUp() {
               type="email"
               placeholder=" Enter Your Name "
               id="input-box"
+              value={username}
+              onChange={ev=>setName(ev.target.value)}
             />
             <label htmlFor="input-box">Email</label>
             <input
@@ -30,7 +53,19 @@ function SignUp() {
             />
 
             <label htmlFor="input-box">Password</label>
-            <input type="password" placeholder=" *********" id="input-box" />
+            <input type="password" placeholder=" *********" id="input-box" 
+              value={email}
+              onChange={ev=>setEmail(ev.target.value)}
+            />
+
+            <label htmlFor="input-box">Password</label>
+            <input 
+            type="password" 
+            placeholder=" *********" 
+            id="input-box" 
+            value={password}
+            onChange={ev=>setPassword(ev.target.value)}
+            />
           </form>
         </div>
 
@@ -43,11 +78,12 @@ function SignUp() {
 
         <div className="button">
           <button class="sign-in-button">Register</button>
-
           <button class="Google-button">
             <img src={Google} alt="" />
             Sign In With Google
           </button>
+          <button class="sign-in-button" onClick={handleSubmit}>Register</button>
+          <OAuth/>
         </div>
 
         <div class="dont-have-an-account-log-in-wrapper">

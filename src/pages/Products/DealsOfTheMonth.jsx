@@ -6,7 +6,9 @@ import img3 from '../../images/text.png';
 
 const DealsOfTheMonth = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date('2024-07-08') - +new Date();
+    const now = new Date();
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0); // End of current month
+    const difference = endOfMonth - now;
     let timeLeft = {};
 
     if (difference > 0) {
@@ -66,7 +68,7 @@ const DealsOfTheMonth = () => {
       <div className="images-container">
         <div className="image-item">
           <img src={img1} alt="Deal 1" />
-          <div className="discount">30% OFF</div>
+         
         </div>
         <div className="image-item">
           <img src={img2} alt="Deal 2" />

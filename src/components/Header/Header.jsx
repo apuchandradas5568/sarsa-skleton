@@ -30,7 +30,8 @@ const Header = () => {
 
       <div className="header-right">
         <div className="heart-icon icon">
-          <FaRegHeart />
+        <Link to={'/wishlist'}>  <FaRegHeart /></Link>
+          
         </div>
         <div onClick={cart} className="cart-icon icon">
           <FiShoppingCart />
