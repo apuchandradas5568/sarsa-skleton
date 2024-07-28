@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 import React from "react";
-=======
 import React, { useState } from "react";
->>>>>>> origin/main
 import image from "../../images/n-1.jpeg";
 import Google from "../../images/search-1.png";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../Login/Login";
 import "./SignUp.css";
-<<<<<<< HEAD
-
-function SignUp() {
-=======
 import OAuth from "../../components/OAuth";
 import useAxiosPublic from "../../hooks/useAxios";
 
@@ -34,7 +27,6 @@ function SignUp() {
       console.log(error);
     }
   }
->>>>>>> origin/main
   return (
     <div className="sign-container">
       <div className="sign-section-1">
@@ -50,23 +42,18 @@ function SignUp() {
               type="email"
               placeholder=" Enter Your Name "
               id="input-box"
-<<<<<<< HEAD
-=======
               value={username}
               onChange={ev=>setName(ev.target.value)}
->>>>>>> origin/main
             />
             <label htmlFor="input-box">Email</label>
             <input
               type="email"
               placeholder=" Enter your email"
               id="input-box"
-<<<<<<< HEAD
             />
 
             <label htmlFor="input-box">Password</label>
-            <input type="password" placeholder=" *********" id="input-box" />
-=======
+            <input type="password" placeholder=" *********" id="input-box" 
               value={email}
               onChange={ev=>setEmail(ev.target.value)}
             />
@@ -79,7 +66,6 @@ function SignUp() {
             value={password}
             onChange={ev=>setPassword(ev.target.value)}
             />
->>>>>>> origin/main
           </form>
         </div>
 
@@ -91,26 +77,18 @@ function SignUp() {
         </div>
 
         <div className="button">
-<<<<<<< HEAD
           <button class="sign-in-button">Register</button>
-
           <button class="Google-button">
             <img src={Google} alt="" />
             Sign In With Google
           </button>
-=======
           <button class="sign-in-button" onClick={handleSubmit}>Register</button>
           <OAuth/>
->>>>>>> origin/main
         </div>
 
         <div class="dont-have-an-account-log-in-wrapper">
           <div class="login-dont-have-an-container">
-<<<<<<< HEAD
             <span class="login-dont-have-an">Alreeady have an account?</span>
-=======
-            <span class="login-dont-have-an">Already have an account?</span>
->>>>>>> origin/main
             <span class="span"> </span>
             <Link to="/login" class="sign-up-fo">
               Login here!

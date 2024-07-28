@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import './ContactSection.css';
 import { FaInstagram, FaFacebook} from "react-icons/fa";
 import {FaXTwitter}  from "react-icons/fa6";
-
-const ContactSection = () => {
-=======
 import React, { useState } from 'react';
 import './ContactSection.css';
 import { FaInstagram, FaFacebook} from "react-icons/fa";
@@ -28,17 +24,14 @@ const ContactSection = () => {
       console.log(error);
     }
   }
->>>>>>> origin/main
   return (
     <div className="contact-section">
        <span className="contact-text">BE IN TOUCH WITH US</span>
       <div className="contact-content">
-<<<<<<< HEAD
         <div className="contact-form">
           <input type="email" placeholder="ENTER YOUR EMAIL" className="email-input" />
           <button className="join-button">JOIN US</button>
         </div>
-=======
         <form className="contact-form" onSubmit={handleSubmit}>
           <input 
             type="email" 
@@ -49,7 +42,6 @@ const ContactSection = () => {
           />
           <button className="join-button">JOIN US</button>
         </form>
->>>>>>> origin/main
       </div>
       <div className="social-icons">
         <FaInstagram className="social-icon" />
@@ -59,5 +51,4 @@ const ContactSection = () => {
     </div>
   );
 }
-
-export default ContactSection;
+export default ContactSection
